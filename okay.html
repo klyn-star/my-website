@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>For My Love 💖</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #e0f7fa; /* Light blue background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .container {
+      text-align: center;
+      background: #bbdefb; /* Soft blue background for the container */
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      color: #0288d1; /* Blue color for the header */
+      margin-bottom: 20px;
+      animation: pulse 1.5s infinite;
+    }
+
+    @keyframes pulse {
+      0%, 100% {
+        transform: scale(1);
+      }
+      50% {
+        transform: scale(1.1);
+      }
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: #555;
+      margin-bottom: 20px;
+    }
+
+    img {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    button {
+      padding: 12px 25px;
+      font-size: 1.2rem;
+      background-color: #0288d1; /* Blue button */
+      color: white;
+      border: none;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0277bd; /* Darker blue on hover */
+      transform: scale(1.1);
+    }
+
+    .message {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #388e3c; /* Green color for the message */
+      display: none;
+    }
+
+    a {
+      display: none;
+      margin-top: 15px;
+      font-size: 1.1rem;
+      color: #0288d1; /* Blue color for the link */
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    a:hover {
+      transform: scale(1.1);
+      color: #0277bd; /* Darker blue on hover */
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Hi, Baby! 💕</h1>
+    <img src="for.jpg" alt="Cute Image">
+    <p>It's okay to have bad days love ha, at least gi try nimo kaysa sa wala. I always be here for you. 🌟</p>
+    <button onclick="showMessage()">click mo love</button>
+    <p id="message" class="message">I hope bisag kani naka tabang ko to make you feel bettter. I miss you so much na lolove, can't wait to see u! I'm always proud of you my liebe! ILOVEYOU💖</p>
+    <a id="specialLink" href="last.html" target="_blank" rel="noopener">Last click na here love 🥰</a>
+  </div>
+
+  <script>
+    function showMessage() {
+      const message = document.getElementById('message');
+      const specialLink = document.getElementById('specialLink');
+
+      message.style.display = "block";
+      specialLink.style.display = "inline-block";
+    }
+  </script>
+</body>
+</html>
