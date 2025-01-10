@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cheer Up💖</title>
+  <style>
+    body {
+      font-family: 'Comic Sans MS', cursive, sans-serif;
+      background-color: #e0f7fa; /* Light blue background */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      background: #bbdefb; /* Soft blue background for the container */
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+      max-width: 400px;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #0288d1; /* Blue color for the header */
+      margin-bottom: 15px;
+      animation: fadeIn 1s ease-in-out;
+    }
+
+    img {
+      width: 120px;
+      margin: 10px 0;
+      animation: bounce 2s infinite;
+    }
+
+    @keyframes bounce {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-10px);
+      }
+    }
+
+    input[type="password"],
+    input[type="text"] {
+      padding: 10px;
+      font-size: 1rem;
+      border: 2px solid #81d4fa; /* Light blue border */
+      border-radius: 10px;
+      outline: none;
+      transition: 0.3s;
+      width: calc(100% - 40px);
+      margin-bottom: 10px;
+    }
+
+    input:focus {
+      border-color: #0288d1;
+      box-shadow: 0 0 10px #0288d1;
+    }
+
+    .toggle-password {
+      position: absolute;
+      right: 25px;
+      top: 92px;
+      cursor: pointer;
+      font-size: 1.2rem;
+      color: #0288d1;
+    }
+
+    button {
+      padding: 10px 20px;
+      font-size: 1rem;
+      background-color: #0288d1; /* Blue button */
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    button:hover {
+      background-color: #0277bd;
+    }
+
+    .message {
+      margin-top: 10px;
+      font-size: 1rem;
+      color: #ff4757; /* Red for error messages */
+    }
+
+    .link {
+      display: none;
+      margin-top: 20px;
+      font-size: 1.2rem;
+      color: #0288d1; /* Blue color for the link */
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    .link:hover {
+      transform: scale(1.1);
+      color: #0277bd; /* Darker blue on hover */
+    }
+
+    .gif-container {
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 150px;
+      height: 150px;
+      background-image: url('cat.gif'); /* Cute floating gif */
+      background-size: cover;
+      background-repeat: no-repeat;
+      animation: rotate 5s infinite linear;
+    }
+
+    @keyframes rotate {
+      0% {
+        transform: rotate(0deg);
+      }
+      100% {
+        transform: rotate(360deg);
+      }
+    }
+
+    @keyframes fadeIn {
+      from {
+        opacity: 0;
+      }
+      to {
+        opacity: 1;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="gif-container"></div>
+    <h1>Hello, Love! 💖</h1>
+    <img src="cutee.png" alt="Cute Bunny">
+    <p>Enter passcode lolove ✨</p>
+    <div style="position: relative;">
+      <input type="password" id="passcode" placeholder="Enter your passcode" aria-label="Passcode">
+      <span class="toggle-password" onclick="togglePassword()">👁️</span>
+    </div>
+    <button onclick="checkPasscode()">Submit</button>
+    <p id="message" class="message"></p>
+    <a id="protectedLink" class="link" href="okay.html" target="_blank" rel="noopener">Click here love! 🥰</a>
+  </div>
+
+  <script>
+    function checkPasscode() {
+      const passcode = document.getElementById('passcode').value;
+      const message = document.getElementById('message');
+      const protectedLink = document.getElementById('protectedLink');
+
+      if (passcode === '012224') {
+        message.textContent = "Yay, tama ka lolove! 🥰";
+        message.style.color = "#28a745"; // Green for success
+        protectedLink.style.display = "inline-block";
+      } else {
+        message.textContent = "Try lang ulit baby💕";
+        message.style.color = "#ff4757"; // Red for error
+        protectedLink.style.display = "none";
+      }
+    }
+
+    function togglePassword() {
+      const passcodeInput = document.getElementById('passcode');
+      const toggle = document.querySelector('.toggle-password');
+
+      if (passcodeInput.type === 'password') {
+        passcodeInput.type = 'text';
+        toggle.textContent = "🙈";
+      } else {
+        passcodeInput.type = 'password';
+        toggle.textContent = "👁️";
+      }
+    }
+  </script>
+</body>
+</html>
